@@ -4,7 +4,7 @@
   "name": "gulp-tools",
   "version": "2.5.0",
   "description": "gulp tools for weblayout",
-  "author": "Victor A.Babikov <vb@vb-h.ru>",
+  "author": "Victor A.Babikov <vicar@ngs.ru>",
   "main": "gulpfile.js",
   "license": "MIT",
   "scripts": {

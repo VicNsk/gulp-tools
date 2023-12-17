@@ -1,6 +1,6 @@
 # Gulp-инструменты для верстки
 
-> Используется Gulp 4 и VS-Code c некоторыми плагинами
+> Используется Gulp 4 и VS-Code c некоторыми плагинами.
 
 ## Начало работы
 
@@ -32,7 +32,7 @@
 
 ## Author
 
-### Victor A.Babikov <victor.babikov@gmail.con>
+### Victor A.Babikov <vicar@ngs.ru>
 
 ## License
 
