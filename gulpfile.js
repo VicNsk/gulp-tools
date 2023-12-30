@@ -16,11 +16,13 @@ global.app = {
 
 /* import tasks */
 import { server } from "./gulp/tasks/server.js";
+import { otfToTtf, ttfToWoff, fontStyle } from "./gulp/tasks/fonts.js";
 
 /*  tracking changes in files */
 const watcher = () => {};
 
 /* task execution scripts */
+const fonts = gulp.series(otfToTtf, ttfToWoff, fontStyle);
 const mainTasks = gulp.series();
 
 // developer/building tasks
@@ -30,6 +32,8 @@ const build = gulp.series(mainTasks);
 /* export of tasks and scripts */
 export { dev };
 export { build };
+
+export { fonts };
 
 /* default task */
 export default app.isDev ? dev : build;
