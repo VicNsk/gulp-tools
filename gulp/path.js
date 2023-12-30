@@ -19,12 +19,16 @@ export const path = {
     ],
     files: [`${srcFolder}/assets/**/*.*`, `!${srcFolder}/assets/img/**/*.*`],
     html: `${srcFolder}/pages/*.html`,
+    styles: `${srcFolder}/sass/style.scss`,
+    scripts: `${srcFolder}/scripts/app.js`,
   },
   dest: {
     sprite: `${srcFolder}/assets/img/`,
     images: `${buildFolder}/assets/img/`,
     files: `${buildFolder}/`,
     html: `${buildFolder}/`,
+    styles: `${buildFolder}/css/`,
+    scripts: `${buildFolder}/js/`,
   },
   watch: {
     sprite: `${srcFolder}/assets/img/svg/*.svg`,
@@ -33,6 +37,8 @@ export const path = {
       `!${srcFolder}/img/svg/**/*.*`,
     ],
     files: [`${srcFolder}/assets/**/*.*`, `!${srcFolder}/assets/img/**/*.*`],
-    html: [`${srcFolder}/**/*.html`, `${srcFolder}/components/**/*.html`],
+    html: `${srcFolder}/**/*.html`,
+    styles: `${srcFolder}/**/*.scss`,
+    scripts: `${srcFolder}/**/*.js`,
   },
 };
