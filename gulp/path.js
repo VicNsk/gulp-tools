@@ -15,6 +15,7 @@ export const path = {
     ],
   },
   dest: {
+    sprite: `${srcFolder}/assets/img/`,
     images: `${buildFolder}/assets/img/`,
   },
   watch: {
