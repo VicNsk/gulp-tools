@@ -30,15 +30,14 @@ export const sprite = () => {
       //
       .pipe(
         svgSprite({
-          // mode: {
-          //   stack: {
-          //     sprite: "../sprite.svg",
-          //     example: true,
-          //   },
-          // },
+          mode: {
+            stack: {
+              sprite: "../sprite.svg",
+            },
+          },
         })
       )
       //
-      .pipe(app.gulp.dest(app.path.src.images))
+      .pipe(app.gulp.dest(app.path.dest.sprite))
   );
 };
