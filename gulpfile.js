@@ -19,10 +19,12 @@ import { clean } from "./gulp/tasks/clean.js";
 import { server } from "./gulp/tasks/server.js";
 import { otfToTtf, ttfToWoff, fontStyle } from "./gulp/tasks/fonts.js";
 import { img, webpImg, avifImg } from "./gulp/tasks/images.js";
+import { resources } from "./gulp/tasks/resources.js";
 import { sprite } from "./gulp/tasks/sprite.js";
 
 /*  tracking changes in files */
 const watcher = () => {
+  gulp.watch(path.watch.files, resources);
   gulp.watch(path.watch.images, img);
 };
 
@@ -32,7 +34,8 @@ const imgWebp = gulp.parallel(webpImg, avifImg);
 const mainTasks = gulp.series(
   clean,
   gulp.parallel(fonts, sprite),
-  gulp.series(img, app.plugins.if(app.isProd, imgWebp))
+  gulp.series(img, app.plugins.if(app.isProd, imgWebp)),
+  gulp.parallel(resources)
 );
 
 // developer/building tasks

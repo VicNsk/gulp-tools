@@ -17,10 +17,12 @@ export const path = {
       `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,webp,avif,gif,ico}`,
       `!${srcFolder}/img/svg/**/*.*`,
     ],
+    files: [`${srcFolder}/assets/**/*.*`, `!${srcFolder}/assets/img/**/*.*`],
   },
   dest: {
     sprite: `${srcFolder}/assets/img/`,
     images: `${buildFolder}/assets/img/`,
+    files: `${buildFolder}/`,
   },
   watch: {
     sprite: `${srcFolder}/assets/img/svg/*.svg`,
@@ -28,5 +30,6 @@ export const path = {
       `${srcFolder}/img/**/*.{jpg,jpeg,png,svg}`,
       `!${srcFolder}/img/svg/**/*.*`,
     ],
+    files: [`${srcFolder}/assets/**/*.*`, `!${srcFolder}/assets/img/**/*.*`],
   },
 };
