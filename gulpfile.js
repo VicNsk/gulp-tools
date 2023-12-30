@@ -21,11 +21,13 @@ import { otfToTtf, ttfToWoff, fontStyle } from "./gulp/tasks/fonts.js";
 import { img, webpImg, avifImg } from "./gulp/tasks/images.js";
 import { resources } from "./gulp/tasks/resources.js";
 import { sprite } from "./gulp/tasks/sprite.js";
+import { pages } from "./gulp/tasks/pages.js";
 
 /*  tracking changes in files */
 const watcher = () => {
   gulp.watch(path.watch.files, resources);
   gulp.watch(path.watch.images, img);
+  gulp.watch(path.watch.html, pages);
 };
 
 /* task execution scripts */
@@ -35,7 +37,7 @@ const mainTasks = gulp.series(
   clean,
   gulp.parallel(fonts, sprite),
   gulp.series(img, app.plugins.if(app.isProd, imgWebp)),
-  gulp.parallel(resources)
+  gulp.parallel(resources, pages)
 );
 
 // developer/building tasks

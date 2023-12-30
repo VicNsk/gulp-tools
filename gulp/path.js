@@ -18,11 +18,13 @@ export const path = {
       `!${srcFolder}/img/svg/**/*.*`,
     ],
     files: [`${srcFolder}/assets/**/*.*`, `!${srcFolder}/assets/img/**/*.*`],
+    html: `${srcFolder}/pages/*.html`,
   },
   dest: {
     sprite: `${srcFolder}/assets/img/`,
     images: `${buildFolder}/assets/img/`,
     files: `${buildFolder}/`,
+    html: `${buildFolder}/`,
   },
   watch: {
     sprite: `${srcFolder}/assets/img/svg/*.svg`,
@@ -31,5 +33,6 @@ export const path = {
       `!${srcFolder}/img/svg/**/*.*`,
     ],
     files: [`${srcFolder}/assets/**/*.*`, `!${srcFolder}/assets/img/**/*.*`],
+    html: [`${srcFolder}/**/*.html`, `${srcFolder}/components/**/*.html`],
   },
 };
