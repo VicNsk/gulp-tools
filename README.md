@@ -20,6 +20,9 @@
 
 Другие gulp-скрипты Вы можете вызывать через npm.
 
+- `npm run fonts` - преобразование шрифтов в форматы `woff` и `woff2`, а так-же создания файла стилей для подключения шрифтов
+- `npm run sprite` - создание файла svg-спрайтов
+
 ## Структура файлов и каталогов
 
 ```
@@ -71,7 +74,7 @@
 
 ## Author
 
-### Victor A.Babikov <vicar@ngs.ru>
+### Victor A.Babikov <victor.ababikov@gmail.com>
 
 ## License
 
