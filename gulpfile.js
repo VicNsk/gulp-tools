@@ -18,6 +18,7 @@ global.app = {
 import { clean } from "./gulp/tasks/clean.js";
 import { server } from "./gulp/tasks/server.js";
 import { otfToTtf, ttfToWoff, fontStyle } from "./gulp/tasks/fonts.js";
+import { sprite } from "./gulp/tasks/sprite.js";
 
 /*  tracking changes in files */
 const watcher = () => {};
@@ -35,6 +36,7 @@ export { dev };
 export { build };
 
 export { fonts };
+export { sprite };
 
 /* default task */
 export default app.isDev ? dev : build;

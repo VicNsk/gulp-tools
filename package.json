@@ -10,10 +10,12 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp --prod",
-    "fonts": "gulp fonts"
+    "fonts": "gulp fonts",
+    "sprite": "gulp sprite"
   },
   "devDependencies": {
     "browser-sync": "^3.0.2",
+    "del": "^7.1.0",
     "fs": "^0.0.1-security",
     "gulp": "^4.0.2",
     "gulp-fonter": "^0.3.0",
