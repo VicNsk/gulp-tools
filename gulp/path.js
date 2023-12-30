@@ -9,8 +9,12 @@ export const path = {
   //
   src: {
     sprite: `${srcFolder}/assets/img/svg/*.svg`,
-    images: [
+    img: [
       `${srcFolder}/img/**/*.{jpg,jpeg,png}`,
+      `!${srcFolder}/img/svg/**/*.*`,
+    ],
+    images: [
+      `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,webp,avif,gif,ico}`,
       `!${srcFolder}/img/svg/**/*.*`,
     ],
   },
@@ -20,5 +24,9 @@ export const path = {
   },
   watch: {
     sprite: `${srcFolder}/assets/img/svg/*.svg`,
+    images: [
+      `${srcFolder}/img/**/*.{jpg,jpeg,png,svg}`,
+      `!${srcFolder}/img/svg/**/*.*`,
+    ],
   },
 };
