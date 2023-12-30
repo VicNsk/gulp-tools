@@ -15,6 +15,7 @@ global.app = {
 };
 
 /* import tasks */
+import { clean } from "./gulp/tasks/clean.js";
 import { server } from "./gulp/tasks/server.js";
 import { otfToTtf, ttfToWoff, fontStyle } from "./gulp/tasks/fonts.js";
 
@@ -23,7 +24,7 @@ const watcher = () => {};
 
 /* task execution scripts */
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontStyle);
-const mainTasks = gulp.series();
+const mainTasks = gulp.series(clean);
 
 // developer/building tasks
 const dev = gulp.series(mainTasks, gulp.parallel(watcher, server));
